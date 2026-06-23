@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Party System &middot; Documentation</title>
+	<meta
+		name="description"
+		content="How the Party System works: forming a party, the consent vote, the countdown, and the rules that keep a group teleport fair and safe."
+	/>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<header class="site-header">
+		<div class="wrap header-inner">
+			<a class="brand" href="#top">Party System</a>
+			<nav class="nav" aria-label="Section navigation">
+				<a href="#overview">Overview</a>
+				<a href="#concepts">Concepts</a>
+				<a href="#flow">How it works</a>
+				<a href="#rules">Rules</a>
+				<a href="#countdown">Countdown</a>
+				<a href="#outcomes">Outcomes</a>
+				<a href="#authority">Who decides</a>
+				<a href="#glossary">Glossary</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="top">
+		<!-- Hero -->
+		<section class="hero">
+			<div class="wrap">
+				<p class="eyebrow">Documentation</p>
+				<h1>The Party System</h1>
+				<p class="lead">
+					A way for a small group of players to stick together and travel as one.
+					Members agree before the group moves, everyone shares the same countdown,
+					and anyone can call the trip off until the very last moment.
+				</p>
+				<div class="hero-badges">
+					<span class="badge">Up to 6 members</span>
+					<span class="badge">Everyone must agree</span>
+					<span class="badge">5-second countdown</span>
+					<span class="badge">Cancel any time</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Overview -->
+		<section id="overview" class="section">
+			<div class="wrap">
+				<h2>Overview</h2>
+				<p>
+					A <strong>party</strong> is a temporary group of players who want to play
+					together. The system has two jobs. First, it manages who is in a party and
+					keeps the group within a safe size. Second, it handles the moment a party
+					wants to travel together to another place &mdash; making sure the whole
+					group agrees before anyone is moved.
+				</p>
+				<p>
+					The guiding idea is simple: <strong>a group move is a shared decision</strong>.
+					No single member can drag everyone else somewhere they did not agree to go,
+					and no member can be left behind by accident. Travel only happens when there
+					is full agreement, and it can always be stopped.
+				</p>
+			</div>
+		</section>
+
+		<!-- Concepts -->
+		<section id="concepts" class="section alt">
+			<div class="wrap">
+				<h2>Core concepts</h2>
+				<div class="card-grid">
+					<article class="card">
+						<h3>Party</h3>
+						<p>
+							A group of players travelling together. A party exists as long as it
+							has at least one member; when the last member leaves, it dissolves.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Member</h3>
+						<p>
+							Any player who has joined a party. Every member sees the same group
+							information and takes part in every group decision.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Leader</h3>
+						<p>
+							The first person in the party. If the leader leaves, the role passes
+							to the next-longest-standing member so the party always has one.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Capacity</h3>
+						<p>
+							A party holds a maximum of <strong>six</strong> members. Once it is
+							full, further join attempts are politely turned away until a spot opens.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Initiator</h3>
+						<p>
+							The member who proposes a group teleport. By making the proposal they
+							are counted as already agreeing to it.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Destination</h3>
+						<p>
+							The place the party is proposing to travel to. It is shown to members
+							for context while they decide.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Flow -->
+		<section id="flow" class="section">
+			<div class="wrap">
+				<h2>How a group teleport works</h2>
+				<p class="section-intro">
+					From the first proposal to the final move, a group teleport passes through a
+					clear sequence of stages. At each stage the whole party is kept informed.
+				</p>
+
+				<ol class="timeline">
+					<li class="step">
+						<span class="step-no">1</span>
+						<div class="step-body">
+							<h3>Proposal</h3>
+							<p>
+								A member asks to teleport the party to a destination. That member is
+								treated as having agreed. Nothing moves yet.
+							</p>
+						</div>
+					</li>
+					<li class="step">
+						<span class="step-no">2</span>
+						<div class="step-body">
+							<h3>Consent prompt</h3>
+							<p>
+								Every <em>other</em> member is shown an <strong>Accept</strong> or
+								<strong>Cancel</strong> choice. They can see who proposed the trip and
+								how many people still need to respond.
+							</p>
+						</div>
+					</li>
+					<li class="step">
+						<span class="step-no">3</span>
+						<div class="step-body">
+							<h3>Collecting the votes</h3>
+							<p>
+								Responses are gathered as they arrive. The running tally is shared
+								with the party so everyone can see the progress toward agreement.
+							</p>
+						</div>
+					</li>
+					<li class="step">
+						<span class="step-no">4</span>
+						<div class="step-body">
+							<h3>The decision</h3>
+							<p>
+								If every member accepts, the trip is approved and moves on to the
+								countdown. If anyone cancels, or anyone runs out of time, the trip is
+								called off immediately for the whole party.
+							</p>
+						</div>
+					</li>
+					<li class="step">
+						<span class="step-no">5</span>
+						<div class="step-body">
+							<h3>Shared countdown</h3>
+							<p>
+								A five-second countdown appears on every member&rsquo;s screen at the
+								same time. A cancel option stays available to everyone throughout.
+							</p>
+						</div>
+					</li>
+					<li class="step">
+						<span class="step-no">6</span>
+						<div class="step-body">
+							<h3>Travel &mdash; or abort</h3>
+							<p>
+								If no one cancels before the countdown ends, the whole party travels
+								together. If anyone cancels during the countdown, the trip is aborted
+								and no one moves.
+							</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- Rules -->
+		<section id="rules" class="section alt">
+			<div class="wrap">
+				<h2>The voting rules</h2>
+				<p class="section-intro">
+					The agreement step follows a few strict rules. They are deliberately
+					cautious: when in doubt, the system chooses <em>not</em> to move anyone.
+				</p>
+
+				<div class="rules">
+					<div class="rule">
+						<div class="rule-tag tag-stop">Any cancel stops it</div>
+						<p>
+							A single <strong>Cancel</strong> from any member ends the trip
+							immediately for everyone. One objection is enough.
+						</p>
+					</div>
+					<div class="rule">
+						<div class="rule-tag tag-stop">Silence counts as no</div>
+						<p>
+							If a member does not respond within the time allowed, their silence is
+							treated as a <strong>Cancel</strong>. No answer is never taken as a yes.
+						</p>
+					</div>
+					<div class="rule">
+						<div class="rule-tag tag-go">Everyone must say yes</div>
+						<p>
+							The trip continues <strong>only</strong> when every member has clearly
+							chosen Accept. Agreement must be unanimous.
+						</p>
+					</div>
+					<div class="rule">
+						<div class="rule-tag tag-stop">Leaving cancels too</div>
+						<p>
+							If a member disconnects or leaves the party while a trip is being
+							decided, the group no longer has everyone&rsquo;s agreement, so the trip
+							is called off.
+						</p>
+					</div>
+				</div>
+
+				<p class="callout">
+					In short: <strong>one yes from everyone</strong> moves the party;
+					<strong>anything else</strong> &mdash; a no, a silence, or a departure &mdash;
+					stops it.
+				</p>
+			</div>
+		</section>
+
+		<!-- Countdown -->
+		<section id="countdown" class="section">
+			<div class="wrap">
+				<h2>The countdown</h2>
+				<p>
+					Reaching unanimous agreement does not move anyone straight away. Instead the
+					party enters a short, shared <strong>five-second countdown</strong>. Its
+					purpose is to give everyone a final, visible chance to change their mind.
+				</p>
+				<div class="countdown-points">
+					<div class="cd-point">
+						<h3>Synchronised</h3>
+						<p>The same countdown is shown to every member at the same time.</p>
+					</div>
+					<div class="cd-point">
+						<h3>Always cancellable</h3>
+						<p>A cancel option remains for every member during the whole countdown.</p>
+					</div>
+					<div class="cd-point">
+						<h3>All or nothing</h3>
+						<p>One cancel during the countdown aborts the trip for the entire party.</p>
+					</div>
+				</div>
+				<p>
+					Only when the countdown finishes with no cancellation does the party travel.
+					Until that instant, stopping is always possible.
+				</p>
+			</div>
+		</section>
+
+		<!-- Outcomes -->
+		<section id="outcomes" class="section alt">
+			<div class="wrap">
+				<h2>If a trip is called off</h2>
+				<p class="section-intro">
+					When a trip does not happen, the party is told why, so the result never feels
+					like a glitch. The common reasons are:
+				</p>
+				<ul class="outcomes">
+					<li><span class="dot"></span> A member chose Cancel during the vote.</li>
+					<li><span class="dot"></span> A member did not respond in time.</li>
+					<li><span class="dot"></span> A member left the party mid-decision.</li>
+					<li><span class="dot"></span> A member cancelled during the final countdown.</li>
+					<li><span class="dot"></span> The travel itself could not be completed, so no one was moved.</li>
+				</ul>
+				<p>
+					In every one of these cases the outcome is the same and predictable:
+					<strong>nobody is moved</strong>, and the party stays exactly as it was.
+				</p>
+			</div>
+		</section>
+
+		<!-- Authority -->
+		<section id="authority" class="section">
+			<div class="wrap">
+				<h2>Who decides</h2>
+				<p>
+					Every important decision is made in one central, trusted place &mdash; the
+					game itself &mdash; rather than on any individual player&rsquo;s device. Each
+					player&rsquo;s screen is only a window onto the shared situation: it shows the
+					prompt and the countdown, and it passes along that player&rsquo;s choices.
+				</p>
+				<p>
+					Keeping the roster, the vote count, and the timing in one trusted place means
+					the rules apply equally to everyone and cannot be quietly bypassed. The party
+					roster, the tally of who has agreed, and the countdown are all judged
+					centrally, and the final decision to travel is made there too.
+				</p>
+				<div class="principles">
+					<div class="principle">
+						<h3>One source of truth</h3>
+						<p>The group&rsquo;s state is kept in a single trusted place that everyone shares.</p>
+					</div>
+					<div class="principle">
+						<h3>Screens only display</h3>
+						<p>A player&rsquo;s view shows the situation and reports their choice; it never decides the result.</p>
+					</div>
+					<div class="principle">
+						<h3>Safe by default</h3>
+						<p>Whenever something is uncertain, the system treats it as a cancel and no one moves.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Glossary -->
+		<section id="glossary" class="section alt">
+			<div class="wrap">
+				<h2>Glossary</h2>
+				<dl class="glossary">
+					<dt>Party</dt>
+					<dd>A temporary group of up to six players travelling together.</dd>
+					<dt>Member</dt>
+					<dd>A player who belongs to a party.</dd>
+					<dt>Leader</dt>
+					<dd>The longest-standing member, who holds the leader role until they leave.</dd>
+					<dt>Initiator</dt>
+					<dd>The member who proposes a group teleport and is counted as agreeing to it.</dd>
+					<dt>Consent prompt</dt>
+					<dd>The Accept-or-Cancel choice shown to the other members when a trip is proposed.</dd>
+					<dt>Unanimous</dt>
+					<dd>Agreed by every member &mdash; the only condition under which a trip proceeds.</dd>
+					<dt>Timeout</dt>
+					<dd>Running out of time to respond, which the system treats as a cancel.</dd>
+					<dt>Countdown</dt>
+					<dd>The shared five-second final window before travel, during which anyone can still cancel.</dd>
+					<dt>Abort</dt>
+					<dd>Calling off a trip so that no member is moved.</dd>
+				</dl>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap">
+			<p>Party System &middot; Project documentation</p>
+			<p class="muted">This page explains how the system behaves. It contains no source code.</p>
+		</div>
+	</footer>
+</body>
+</html>
